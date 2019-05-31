@@ -1,5 +1,13 @@
 # Flask Skeleton
 
+Forked from [realpython](https://github.com/realpython/cookiecutter-flask-skeleton).
+* Added to requirements.txt:
+  * [Flask-JSON](https://pythonhosted.org/Flask-JSON/)==0.3.3
+  * [python_dotenv](https://github.com/theskumar/python-dotenv)==0.10.2
+* Added blueprint for an API (which uses Flask-JSON)
+* Todo:
+  * Add tests for API
+
 Flask starter project for [Cookiecutter](https://github.com/audreyr/cookiecutter).
 
 [![Build Status](https://travis-ci.org/realpython/cookiecutter-flask-skeleton.svg?branch=master)](https://travis-ci.org/realpython/cookiecutter-flask-skeleton)
