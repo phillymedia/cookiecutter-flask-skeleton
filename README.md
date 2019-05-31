@@ -23,7 +23,7 @@ $ pip install cookiecutter
 Generate the boilerplate:
 
 ```sh
-$ cookiecutter https://github.com/phillymedia/cookiecutter-flask-skeleton
+$ cookiecutter https://github.com/phillymedia/cookiecutter-flask-skeleton.git
 ```
 
 Once generated, review the setup guides, within the newly created project directory, to configure the app:
