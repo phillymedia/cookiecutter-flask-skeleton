@@ -22,7 +22,6 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 migrate = Migrate()
 flask_json = FlaskJSON()
-admin = Admin(name='CMS', template_mode='bootstrap3')
 
 
 def create_app(script_info=None):
@@ -48,7 +47,6 @@ def create_app(script_info=None):
     db.init_app(app)
     migrate.init_app(app, db)
     flask_json.init_app(app)
-    admin.init_app(app)
 
     # register blueprints
     from project.server.user.views import user_blueprint
@@ -68,6 +66,10 @@ def create_app(script_info=None):
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.filter(User.id == int(user_id)).first()
+
+    # register admin modules
+    admin = Admin(app, name='CMS', template_mode='bootstrap3')
+    admin.add_view(ModelView(User, db.session, endpoint='users', category="Users"))
 
     # error handlers
     @app.errorhandler(401)
