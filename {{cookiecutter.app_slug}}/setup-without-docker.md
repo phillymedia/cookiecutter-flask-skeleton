@@ -9,7 +9,7 @@ Create and activate a virtual environment, and then install the requirements.
 ```sh
 $ python -m venv venv
 $ source venv/bin/activate
-$ pip install -r requirements.txt 
+$ pip install -r requirements.txt
 ```
 
 ### Set Environment Variables
@@ -36,6 +36,8 @@ FLASK_DEBUG=1
 ```
 
 ### Create DB
+
+Learn more about [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/).
 
 ```sh
 $ python manage.py create-db

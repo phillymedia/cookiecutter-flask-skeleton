@@ -11,6 +11,7 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_json import FlaskJSON
+from flask_admin import Admin
 
 
 # instantiate the extensions
@@ -21,6 +22,7 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 migrate = Migrate()
 flask_json = FlaskJSON()
+admin = Admin(name='CMS', template_mode='bootstrap3')
 
 
 def create_app(script_info=None):
@@ -46,6 +48,7 @@ def create_app(script_info=None):
     db.init_app(app)
     migrate.init_app(app, db)
     flask_json.init_app(app)
+    admin.init_app(app)
 
     # register blueprints
     from project.server.user.views import user_blueprint
