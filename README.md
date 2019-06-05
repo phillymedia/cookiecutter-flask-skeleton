@@ -4,6 +4,7 @@ Forked from [realpython](https://github.com/realpython/cookiecutter-flask-skelet
 * Added to requirements.txt:
   * [Flask-JSON](https://pythonhosted.org/Flask-JSON/)==0.3.3
   * [python_dotenv](https://github.com/theskumar/python-dotenv)==0.10.2
+  * [Flask-Admin](https://flask-admin.readthedocs.io/en/latest/introduction/)
 * Added blueprint for an API (which uses Flask-JSON)
 * Todo:
   * Add tests for API
